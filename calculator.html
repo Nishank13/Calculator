@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<title>CALCULATOR</title>
+</head>
+ <script type="text/javascript" src="calculator.js"></script>
+<body>
+	<h3 style="text-align: center">CALCULATOR</h3>
+	<table class="outline" border="1">
+		<td colspan="5"><input id="textarea" type="text" maxlength="15" onPaste="return noPaste(this)" onkeypress="return num_all(this)"><!-- <span class="blinking" onfocus="">|</span> --></td>
+		<tr class="buttons">
+			<td onclick="display('7')"><input type="button" value="7" /></td>
+			<td onclick="display('8')"><input type="button" value="8" ></td>
+			<td onclick="display('9')"><input type="button" value="9" ></td>
+			<td onclick="cal('/')"><input type="button" value="/" ></td>
+			<td onclick="cal('%')"><input type="button" value="%" ></td>
+		</tr>
+		<tr class="buttons">
+			<td onclick="display('4')"><input type="button" value="4" ></td>
+			<td onclick="display('5')"><input type="button" value="5" ></td>
+			<td onclick="display('6')"><input type="button" value="6" ></td>
+			<td onclick="cal('*')"><input type="button" value="*" ></td>
+			<td onclick="reset('c')"><input type="button" value="c" ></td>
+		</tr>
+		<tr class="buttons">
+			<td onclick="display('1')"><input type="button" value="1" ></td>
+			<td onclick="display('2')"><input type="button" value="2" ></td>
+			<td onclick="display('3')"><input type="button" value="3" ></td>
+			<td onclick="cal('-')"><input type="button" value="-" ></td>
+			<td onclick="solve()"><input type="button" value="=" ></td>
+		</tr>
+		<tr class="buttons">
+			<td colspan="2" onclick="display('0')"><input type="button" value="0" ></td>
+			<td onclick="display('.')"><input type="button" value="." ></td>
+			<td onclick="cal('+')"><input type="button" value="+" ></td>
+			<td onclick="reset('ce')"><input type="button" value="AC" ></td>
+		</tr>
+	</table>
+</body>
+</html>
