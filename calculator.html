@@ -6,36 +6,57 @@
 </head>
  <script type="text/javascript" src="calculator.js"></script>
 <body>
-	<h3 style="text-align: center">CALCULATOR</h3>
-	<table class="outline" border="1">
-		<td colspan="5"><input id="textarea" type="text" maxlength="15" onPaste="return noPaste(this)" onkeypress="return num_all(this)"><!-- <span class="blinking" onfocus="">|</span> --></td>
-		<tr class="buttons">
-			<td onclick="display('7')"><input type="button" value="7" /></td>
-			<td onclick="display('8')"><input type="button" value="8" ></td>
-			<td onclick="display('9')"><input type="button" value="9" ></td>
-			<td onclick="cal('/')"><input type="button" value="/" ></td>
-			<td onclick="cal('%')"><input type="button" value="%" ></td>
-		</tr>
-		<tr class="buttons">
-			<td onclick="display('4')"><input type="button" value="4" ></td>
-			<td onclick="display('5')"><input type="button" value="5" ></td>
-			<td onclick="display('6')"><input type="button" value="6" ></td>
-			<td onclick="cal('*')"><input type="button" value="*" ></td>
-			<td onclick="reset('c')"><input type="button" value="c" ></td>
-		</tr>
-		<tr class="buttons">
-			<td onclick="display('1')"><input type="button" value="1" ></td>
-			<td onclick="display('2')"><input type="button" value="2" ></td>
-			<td onclick="display('3')"><input type="button" value="3" ></td>
-			<td onclick="cal('-')"><input type="button" value="-" ></td>
-			<td onclick="solve()"><input type="button" value="=" ></td>
-		</tr>
-		<tr class="buttons">
-			<td colspan="2" onclick="display('0')"><input type="button" value="0" ></td>
-			<td onclick="display('.')"><input type="button" value="." ></td>
-			<td onclick="cal('+')"><input type="button" value="+" ></td>
-			<td onclick="reset('ce')"><input type="button" value="AC" ></td>
-		</tr>
-	</table>
+	<div class="whole_doc">
+		<div class="calc">	
+			<td style="display: inline-block;">
+			<tr><button style="background-color: black;margin-right: 40px;margin-top: 22px;float:right; opacity: 0.7; width: 140px;height: 30px;font-size: 28px;color:grey;border: none;padding: 0.2px;border-radius: 2px; word-spacing: 0.4cm;" disabled="">|     |    |    |</button></tr>
+			<tr><h3 style="float: left;margin-left:35px;margin-top: 25px;font-weight: bold;font-family: Asset; ">CASIO Ltd.</h3></tr>
+			<div style="height: 50px;padding-left: 20px;">
+				<textarea readonly="" style="float: left;margin: 20px 2px 9px 0px;resize: none;height: 19px;font-size: 16px;opacity: 0.9;border: none;width: 170px;">Texas Instruments</textarea>
+						<p class="side_text" readonly="" style="margin: 18px 0px 5px 32px;font-size: 19px;width: 140px;">TI-<b>30X</b>IIS</p>
+			</div>
+		<!-- displaying area -->
+			<td colspan="5"><input id="textarea" type="text" maxlength="15" autofocus="" onPaste="return noPaste(this);" onkeypress="return num_all(this)"></td>
+			</td>
+		<!-- buttons area -->
+		<table class="outline">
+			<tr class="buttons">
+				<td class="num" onclick="display('7')"><input type="button" value="7" /></td>
+				<td class="num" onclick="display('8')"><input type="button" value="8" ></td>
+				<td class="num" onclick="display('9')"><input type="button" value="9" ></td>
+				<td class="op" onclick="cal('/')"><input type="button" value="/" ></td>
+				<td class="op" onclick="cal('%')"><input type="button" value="%" ></td>
+			</tr>
+			<tr class="buttons">
+				<td class="num" onclick="display('4')"><input type="button" value="4" ></td>
+				<td class="num" onclick="display('5')"><input type="button" value="5" ></td>
+				<td class="num" onclick="display('6')"><input type="button" value="6" ></td>
+				<td class="op" onclick="cal('*')"><input type="button" value="*" ></td>
+				<td class="op" onclick="reset('c')"><input type="button" value="c" ></td>
+			</tr>
+			<tr class="buttons">
+				<td class="num" onclick="display('1')"><input type="button" value="1" ></td>
+				<td class="num" onclick="display('2')"><input type="button" value="2" ></td>
+				<td class="num" onclick="display('3')"><input type="button" value="3" ></td>
+				<td class="op" onclick="cal('-')"><input type="button" value="-" ></td>
+				<td class="op" onclick="solve()"><input type="button" value="=" ></td>
+			</tr>
+			<tr class="buttons">
+				<td class="num" colspan="2" onclick="display('0')"><input type="button" value="0" ></td>
+				<td class="num" onclick="display('.')"><input type="button" value="." ></td>
+				<td class="op" onclick="cal('+')"><input type="button" value="+" ></td>
+				<td class="op" onclick="reset('ce')"><input type="button" value="AC" ></td>
+			</tr>
+		</table>
+		</div>
+	<!-- Steps box -->
+		<div class="steps_box">
+				<h3 style="text-align: center;">History</h3>
+				<table>
+					<td><textarea id="steps_area" readonly=""></textarea></td>
+				</table>
+				<button id="res" onclick="rmv_stps()">Reset Steps</button>
+		</div>
+	</div>
 </body>
 </html>
