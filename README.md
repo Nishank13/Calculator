@@ -10,10 +10,6 @@ Some of it's properties are:
 -----> you can delete the last element by pressing 'c'.
 -----> reset the whole display area by pressing 'A'.
 -----> if the last character is an operator and '=' is pressed then it will be removed from answer.
-
-
-------> upcoming<------
-----> you wont be able to paste any alphabet in display area.
-----> some basic UI changes.
+-----> you wont be able to paste any alphabet in display area.
 
 Hope you enjoy using it.
